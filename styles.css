@@ -1,5 +1,18 @@
 body {
-  background: #00d2ff;
-  background: -webkit-linear-gradient(to right, #3a7bd5, #00d2ff);
-  background: linear-gradient(to right, #3a7bd5, #00d2ff);
+  text-align: center;
+}
+.Credit {
+  opacity: 0.5;
+}
+.Credit:hover {
+  opacity: 1;
+}
+.Content {
+  display: block;
+  padding: 3px;
+  border-radius: 5px;
+  width: 50%;
+  background-color: white;
+  margin-left: auto;
+  margin-right: auto;
 }

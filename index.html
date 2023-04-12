@@ -5,24 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <!-- the data -->
+    <!-- the background data -->
     <script src="data.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-    <link href="styles.css" rel="stylesheet" />
+
     <script>
       $(document).ready(function () {
-        $("#name").text("Error");
+        const randomColor1 =
+          data[Math.floor(Math.random() * data.length)].colors[0];
+        const randomColor2 =
+          data[Math.floor(Math.random() * data.length)].colors[1];
+
+        $("body").css({
+          background: `-webkit-gradient(linear, left top, right bottom, from(${randomColor1}), to(${randomColor2}))`,
+        });
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // $("#name").text("Error");
         $("#btn").click(function (event) {
           event.preventDefault();
-          console.log(data);
-          var randomColor = Math.floor(Math.random() * 10000000).toString(16);
-          $("body").css("background", "#" + randomColor);
+          console.log("randomColor1");
         });
       });
     </script>
   </head>
   <body>
-    <div id="name">My name is Abolfazl Samini.</div>
-    <input type="button" id="btn" value="button" />
+    <div class="Content">
+      <div id="name">My name is Abolfazl Samini.</div>
+      <!-- <input type="button" id="btn" value="button" /> -->
+      <div class="Credit" id="Credit">
+        background colors:
+        <a href="https://www.uigradients.com" target="_blank"
+          >uigradients.com</a
+        >
+      </div>
+    </div>
   </body>
 </html>
