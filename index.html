@@ -5,22 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Profile</title>
-    <!-- the background data -->
+    <!-- the background color data -->
     <script src="data.js"></script>
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="styles.css" rel="stylesheet" />
-
-    <!-- <script>
-      let apiKey = "AIzaSyCpe_q1PRyEMDcS-7LAOwz-l25jy2o8g9o";
-      $(document).ready(function () {
-        $.get("https://www.googleapis.com/webfonts/v1/webfonts?key=" + apiKey)
-          .done(function (data) {
-          })
-          .fail(function (error) {
-            console.error(error);
-          });
-      });
-    </script> -->
     <script>
       $(document).ready(function () {
         chosenColor = data[Math.floor(Math.random() * data.length)];
