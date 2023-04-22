@@ -199,7 +199,6 @@ let data = [
   { name: "Lush", colors: ["#56ab2f", "#a8e063"] },
   { name: "Firewatch", colors: ["#cb2d3e", "#ef473a"] },
   { name: "Sherbert", colors: ["#f79d00", "#64f38c"] },
-  { name: "Blood Red", colors: ["#f85032", "#e73827"] },
   { name: "Sun on the Horizon", colors: ["#fceabb", "#f8b500"] },
   { name: "IIIT Delhi", colors: ["#808080", "#3fada8"] },
   { name: "Jupiter", colors: ["#ffd89b", "#19547b"] },
