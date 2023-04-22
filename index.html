@@ -7,26 +7,90 @@
     <title>Profile</title>
     <!-- the background data -->
     <script src="data.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js"></script>
-    <link href="https://fonts.cdnfonts.com/css/random" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="styles.css" rel="stylesheet" />
 
+    <!-- <script>
+      let apiKey = "AIzaSyCpe_q1PRyEMDcS-7LAOwz-l25jy2o8g9o";
+      $(document).ready(function () {
+        $.get("https://www.googleapis.com/webfonts/v1/webfonts?key=" + apiKey)
+          .done(function (data) {
+          })
+          .fail(function (error) {
+            console.error(error);
+          });
+      });
+    </script> -->
     <script>
       $(document).ready(function () {
-        const randomColor1 =
-          data[Math.floor(Math.random() * data.length)].colors[0];
-        const randomColor2 =
-          data[Math.floor(Math.random() * data.length)].colors[1];
-
+        chosenColor = data[Math.floor(Math.random() * data.length)];
+        const randomColor1 = chosenColor.colors[0];
+        const randomColor2 = chosenColor.colors[1];
         $("body").css({
-          background: `-webkit-gradient(linear, left top, right bottom, from(${randomColor1}), to(${randomColor2}))`,
+          // background: `linear-gradient(to right, ${randomColor1}, ${randomColor2})`,
+          // opacity: 0.1,
         });
       });
     </script>
-
     <script>
+      function getRanColor() {
+        chosenColor = data[Math.floor(Math.random() * data.length)];
+        const randomColor1 = chosenColor.colors[0];
+        const randomColor2 = chosenColor.colors[1];
+        console.log(chosenColor.name);
+        return [randomColor1, randomColor2];
+      }
+
+      var box = document.querySelector(".box");
+      var box2 = document.querySelector(".box2");
+      var randColor1 = getRanColor();
+      var gradient1 = `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
+
+      function changeb1opacity() {
+        var box = document.querySelector(".box");
+        var box2 = document.querySelector(".box2");
+        $(box).css({
+          opacity: 0,
+        });
+        $(box2).css({
+          opacity: 1,
+        });
+        setTimeout(changeb2color, 5000);
+      }
+      function changeb2color() {
+        var randColor1 = getRanColor();
+        var gradient1 = `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
+        var box = document.querySelector(".box");
+        var box2 = document.querySelector(".box2");
+        $(box).css({
+          background: gradient1,
+        });
+        setTimeout(changeb2opacity, 5000);
+      }
+      function changeb2opacity() {
+        var box = document.querySelector(".box");
+        var box2 = document.querySelector(".box2");
+        $(box2).css({
+          opacity: 0,
+        });
+        $(box).css({
+          opacity: 1,
+        });
+        setTimeout(changeb1color, 5000);
+      }
+      function changeb1color() {
+        var randColor1 = getRanColor();
+        var gradient1 = `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
+        var box = document.querySelector(".box");
+        var box2 = document.querySelector(".box2");
+
+        $(box2).css({
+          background: gradient1,
+        });
+        setTimeout(changeb1opacity, 5000);
+      }
+      changeb1opacity(5000);
       $(document).ready(function () {
-        // $("#name").text("Error");
         $("#btn").click(function (event) {
           event.preventDefault();
           console.log("randomColor1");
@@ -34,10 +98,34 @@
       });
     </script>
   </head>
-  <body>
-    <div class="Content">
+  <body id="body">
+    <div class="box"></div>
+    <div class="box2"></div>
+    <div id="Content" class="Content">
       <div id="name">My name is Abolfazl Samini.</div>
-      <!-- <input type="button" id="btn" value="button" /> -->
+      <div id="list">
+        what i an do in Front-End
+        <ul id="front">
+          <li><a href="https://react.dev/" target="_blank">React</a></li>
+          <li>
+            <a href="https://reactnative.dev/" target="_blank">React-Native</a>
+          </li>
+          <li><a href="https://nextjs.org/" target="_blank">Next-JS</a></li>
+          <li><a href="https://nextjs.org/" target="_blank">jquery</a></li>
+        </ul>
+
+        what i an do in Back-End
+        <ul id="back">
+          <li>
+            <a href="https://www.djangoproject.com/" target="_blank">Django</a>
+          </li>
+          <li>
+            <a href="https://flask.palletsprojects.com/" target="_blank"
+              >Flask</a
+            >
+          </li>
+        </ul>
+      </div>
       <div class="Credit" id="Credit">
         background colors:
         <a href="https://www.uigradients.com" target="_blank"
