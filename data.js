@@ -4,7 +4,6 @@ let data = [
   { name: "Ver Black", colors: ["#F7F8F8", "#ACBB78"] },
   { name: "Combi", colors: ["#00416A", "#799F0C", "#FFE000"] },
   { name: "Anwar", colors: ["#334d50", "#cbcaa5"] },
-  { name: "Bluelagoo", colors: ["#0052D4", "#4364F7", "#6FB1FC"] },
   { name: "Lunada", colors: ["#5433FF", "#20BDFF", "#A5FECB"] },
   { name: "Reaqua", colors: ["#799F0C", "#ACBB78"] },
   { name: "Mango", colors: ["#ffe259", "#ffa751"] },
