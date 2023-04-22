@@ -51,7 +51,6 @@ let data = [
   { name: "Stripe", colors: ["#1FA2FF", "#12D8FA", "#A6FFCB"] },
   { name: "Sea Weed", colors: ["#4CB8C4", "#3CD3AD"] },
   { name: "Pinky", colors: ["#DD5E89", "#F7BB97"] },
-  { name: "Cherry", colors: ["#EB3349", "#F45C43"] },
   { name: "Mojito", colors: ["#1D976C", "#93F9B9"] },
   { name: "Juicy Orange", colors: ["#FF8008", "#FFC837"] },
   { name: "Mirage", colors: ["#16222A", "#3A6073"] },

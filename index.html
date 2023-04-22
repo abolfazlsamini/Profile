@@ -11,17 +11,6 @@
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
     <link href="styles.css" rel="stylesheet" />
     <script>
-      $(document).ready(function () {
-        chosenColor = data[Math.floor(Math.random() * data.length)];
-        const randomColor1 = chosenColor.colors[0];
-        const randomColor2 = chosenColor.colors[1];
-        $("body").css({
-          // background: `linear-gradient(to right, ${randomColor1}, ${randomColor2})`,
-          // opacity: 0.1,
-        });
-      });
-    </script>
-    <script>
       function getRanColor() {
         chosenColor = data[Math.floor(Math.random() * data.length)];
         const randomColor1 = chosenColor.colors[0];
