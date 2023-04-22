@@ -39,7 +39,6 @@
         var randColor1 = getRanColor();
         var gradient1 = `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
         var box = document.querySelector(".box");
-        var box2 = document.querySelector(".box2");
         $(box).css({
           background: gradient1,
         });
@@ -61,7 +60,6 @@
         var gradient1 = randColor1[2]
           ? `linear-gradient(to right, ${randColor1[0]},${randColor1[1]},${randColor1[2]})`
           : `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
-        var box = document.querySelector(".box");
         var box2 = document.querySelector(".box2");
 
         $(box2).css({
@@ -69,7 +67,7 @@
         });
         setTimeout(changeb1opacity, 5000);
       }
-      changeb1opacity(5000);
+      changeb1opacity();
       $(document).ready(function () {
         $("#btn").click(function (event) {
           event.preventDefault();
