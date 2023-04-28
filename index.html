@@ -57,9 +57,10 @@
       }
       function changeb1color() {
         var randColor1 = getRanColor();
-        var gradient1 = randColor1[2]
-          ? `linear-gradient(to right, ${randColor1[0]},${randColor1[1]},${randColor1[2]})`
-          : `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
+        var gradient1 =
+          randColor1[2] != undefined
+            ? `linear-gradient(to right, ${randColor1[0]},${randColor1[1]},${randColor1[2]})`
+            : `linear-gradient(to right, ${randColor1[0]},${randColor1[1]})`;
         var box2 = document.querySelector(".box2");
 
         $(box2).css({
