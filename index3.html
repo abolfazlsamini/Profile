@@ -1,27 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"
-    />
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="MobileOptimized" content="176" />
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="robots" content="noindex,nofollow" />
-    <title></title>
-    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <link href="./output.css" rel="stylesheet" />
+    <!-- <script src="https://telegram.org/js/telegram-web-app.js"></script> -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LorBrick Coin</title>
   </head>
-
-  <body class="">
-    <button id="main_btn" onclick="send()">Send «Hello, World!»</button>dfsd
-
-    <script type="application/javascript">
-      function send() {
-        alert("asdasd");
-        window.Telegram.WebApp.sendData("data");
+  <body class="bg-black text-white">
+    <div class="relative">
+      <div class="absolute left-1/2 top-3">
+        <img
+          class="size-1/2 cursor-pointer"
+          id="brick"
+          src="brick.png"
+          onmousedown="clicked()"
+          onmouseup="unclicked()"
+        />
+        <div>
+          <span id="coins">5000/</span>
+          <span id="limit">5000</span>
+        </div>
+      </div>
+    </div>
+    <script>
+      var coins = 5000;
+      var limit = 5000;
+      function mine() {
+        coins -= 1;
+        document.getElementById("coins").innerText = coins;
+      }
+      function clicked() {
+        document.getElementById("brick").style.transform = "rotate(3deg)";
+      }
+      function unclicked() {
+        document.getElementById("brick").style.transform = "rotate(0deg)";
+        mine();
       }
     </script>
   </body>
