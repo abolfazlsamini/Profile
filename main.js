@@ -135,9 +135,9 @@ wall_1.position.y = 10;
 // wall.rotateY(-0.785398);
 
 const wall_2 = new THREE.Mesh(geometry_wall, material_wall);
-wall_2.position.x = 20;
+// wall_2.position.x = 20;
 wall_2.position.y = 10;
-wall_2.position.z = 10;
+// wall_2.position.z = 10;
 // wall_2.rotateY(0.785398);
 
 const wall_3 = new THREE.Mesh(geometry_wall, material_wall);
@@ -167,6 +167,7 @@ loader.load("font2.json", function (font) {
   text.position.x = -6.2;
   text.position.y = 17;
   text.position.z = 0.6;
+  text.rotateY(0.5);
   // text.rotateY(-0.785398);
 
   const material_mail = new THREE.MeshBasicMaterial({ color: 0xffffff });
@@ -186,6 +187,25 @@ loader.load("font2.json", function (font) {
   text_email.position.x = -7;
   text_email.position.y = 10;
   text_email.position.z = 0.6;
+  text_email.rotateY(1.908);
+  const material_detail = new THREE.MeshBasicMaterial({ color: 0xffffff });
+  const geometry_detail = new TextGeometry("Full-Stack developer", {
+    font: font,
+    size: 130,
+    depth: 80,
+    curveSegments: 12,
+    bevelEnabled: false,
+    bevelThickness: 1,
+    bevelSize: 8,
+    bevelOffset: 0,
+    bevelSegments: 5,
+  });
+  geometry_detail.scale(0.01, 0.02, 0.01);
+  const text_detail = new THREE.Mesh(geometry_detail, material_detail);
+  text_detail.position.x = -7;
+  text_detail.position.y = 1;
+  text_detail.position.z = 0.6;
+
   // text_email.rotateY(-0.785398);
   // scene.add(text, text_email);
 
@@ -194,7 +214,7 @@ loader.load("font2.json", function (font) {
   const pointLight = new THREE.PointLight(0xff3ea5, 20, 50, 2);
   pointLight.position.set(0, 18, 5);
   // scene.add(control);
-  scene.add(pointLight);
+  scene.add(pointLight, text_detail);
   const pointLight_email = new THREE.PointLight(0xffffff, 10, 50, 2);
   pointLight_email.position.set(0, 11, 5);
   // scene.add(control);
@@ -210,14 +230,20 @@ loader.load("font2.json", function (font) {
   // console.log(text.position, text.rotation);
 });
 const point = new THREE.Object3D();
+const point2 = new THREE.Object3D();
 // point.position.x = -10;
 // point.position.y = -10;
 // point.position.z = -10;
 // wall.attach(point);
 point.attach(wall_1);
-point.rotateY(1.5708);
+point.translateX(-7);
+point.rotateY(1.908);
 control.attach(point);
-scene.add(point);
+
+point2.attach(wall_2);
+point2.rotateY(1);
+point2.translateX(15);
+scene.add(point, point2);
 // point.position.z = 15;
 const pointLight = new THREE.PointLight(0xffffff, 10, 50, 2);
 pointLight.position.set(10, 10, 10);
