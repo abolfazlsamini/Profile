@@ -111,8 +111,8 @@ material_floor.map = wall1;
 material_floor.normalMap = wall1_normal;
 
 const material_wall = new THREE.MeshPhongMaterial();
-const wall2 = new THREE.TextureLoader().load("wall3.jpg");
-const wall2_normal = new THREE.TextureLoader().load("wall3_normal.jpg");
+const wall2 = new THREE.TextureLoader().load("./wall3.jpg");
+const wall2_normal = new THREE.TextureLoader().load("./wall3_normal.jpg");
 wall2.wrapS = THREE.RepeatWrapping;
 wall2.wrapT = THREE.RepeatWrapping;
 wall2.repeat.set(2, 2);
