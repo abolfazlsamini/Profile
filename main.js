@@ -99,8 +99,8 @@ const geometry_floor = new THREE.PlaneGeometry(120, 120, 120, 120);
 const geometry_wall = new THREE.BoxGeometry(2, 20, 20, 5, 5, 5);
 const material_floor = new THREE.MeshPhongMaterial();
 
-const wall1 = new THREE.TextureLoader().load("wall2.jpg");
-const wall1_normal = new THREE.TextureLoader().load("wall2_normal.jpg");
+const wall1 = new THREE.TextureLoader().load("./wall2.jpg");
+const wall1_normal = new THREE.TextureLoader().load("./wall2_normal.jpg");
 wall1.wrapS = THREE.RepeatWrapping;
 wall1.wrapT = THREE.RepeatWrapping;
 wall1.repeat.set(10, 10);
@@ -149,7 +149,7 @@ scene.add(floor, wall_2, wall_3);
 
 let font = undefined;
 const loader = new FontLoader();
-loader.load("font2.json", function (font) {
+loader.load("./font2.json", function (font) {
   const material = new THREE.MeshBasicMaterial({ color: 0xff3ea5 });
   const geometry = new TextGeometry("Abolfazl Samini", {
     font: font,
