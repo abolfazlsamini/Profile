@@ -132,7 +132,7 @@ const wall_1 = new THREE.Mesh(geometry_wall, material_wall);
 // wall.position.x = -10;
 wall_1.position.y = 10;
 // wall.position.z = -10;
-// wall.rotateY(-0.785398);
+wall_1.rotateY(1.5708);
 
 const wall_2 = new THREE.Mesh(geometry_wall, material_wall);
 // wall_2.position.x = 20;
@@ -167,7 +167,7 @@ loader.load("./font2.json", function (font) {
   text.position.x = -6.2;
   text.position.y = 17;
   text.position.z = 0.6;
-  text.rotateY(0.5);
+  // text.rotateY(0.5);
   // text.rotateY(-0.785398);
 
   const material_mail = new THREE.MeshBasicMaterial({ color: 0xffffff });
@@ -187,7 +187,7 @@ loader.load("./font2.json", function (font) {
   text_email.position.x = -7;
   text_email.position.y = 10;
   text_email.position.z = 0.6;
-  text_email.rotateY(1.908);
+  // text_email.rotateY(1.908);
   const material_detail = new THREE.MeshBasicMaterial({ color: 0xffffff });
   const geometry_detail = new TextGeometry("Full-Stack developer", {
     font: font,
@@ -236,8 +236,8 @@ const point2 = new THREE.Object3D();
 // point.position.z = -10;
 // wall.attach(point);
 point.attach(wall_1);
-point.translateX(-7);
-point.rotateY(1.908);
+// point.translateX(-7);
+// point.rotateY(1.908);
 control.attach(point);
 
 point2.attach(wall_2);
