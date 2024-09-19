@@ -149,7 +149,7 @@ scene.add(floor, wall_2, wall_3);
 
 let font = undefined;
 const loader = new FontLoader();
-loader.load("./font2.json", function (font) {
+loader.load("./font.json", function (font) {
   const material = new THREE.MeshBasicMaterial({ color: 0xff3ea5 });
   const geometry = new TextGeometry("Abolfazl Samini", {
     font: font,
@@ -210,7 +210,7 @@ loader.load("./font2.json", function (font) {
   // scene.add(text, text_email);
 
   // control.attach(text);
-  scene.add(control);
+  // scene.add(control);
   const pointLight = new THREE.PointLight(0xff3ea5, 20, 50, 2);
   pointLight.position.set(0, 18, 5);
   // scene.add(control);
@@ -253,7 +253,7 @@ const sphereSize = 1;
 const pointLightHelper = new THREE.PointLightHelper(pointLight, sphereSize);
 // scene.add(pointLightHelper);
 
-camera.position.set(0, 10, 40);
+camera.position.set(0, 20, 50);
 // camera.rotateX(-1.86694);
 // camera.rotateY(-1.5);
 // controls.update();
