@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Abolfazl's Profile</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
     <style>
       :root {
         --bg-color: #f4f4f4;
@@ -90,8 +94,23 @@
       .title {
         color: var(--title-color);
         font-style: italic;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         transition: color 0.3s;
+      }
+
+      .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        color: var(--link-color);
+        text-decoration: none;
+        margin-bottom: 20px;
+        transition: color 0.2s;
+      }
+
+      .github-link:hover {
+        color: var(--link-hover);
+        text-decoration: underline;
       }
 
       .bio {
@@ -160,12 +179,20 @@
       <div class="profile-header">
         <button class="dark-mode-toggle" id="darkModeToggle">Dark Mode</button>
         <img
-          src="https://avatars.githubusercontent.com/u/53626987"
+          src="https://via.placeholder.com/150"
           alt="Profile Picture"
           class="profile-pic"
         />
         <h1>Abolfazl</h1>
         <p class="title">Full Stack Developer (Backend Focus)</p>
+        <a
+          href="https://github.com/abolfazlsamini"
+          class="github-link"
+          target="_blank"
+        >
+          <i class="fab fa-github"></i>
+          GitHub Profile
+        </a>
       </div>
 
       <div class="bio">
@@ -187,8 +214,8 @@
             <span class="work-tech">Next.js</span>
           </div>
           <div class="work-description">
-            An e-commerce platform with product listings and shopping features,
-            developed using Next.js.
+            A modern, responsive website built with Next.js framework featuring
+            dynamic content and optimized performance.
           </div>
           <a
             href="https://ersa-nextjs.vercel.app/"
@@ -204,8 +231,8 @@
             <span class="work-tech">Next.js</span>
           </div>
           <div class="work-description">
-            A modern, responsive website built with Next.js framework featuring
-            dynamic content and optimized performance.
+            A healthcare-focused website with clean design and smooth user
+            interactions, implemented with Next.js.
           </div>
           <a
             href="https://bethesda-nextjs.vercel.app/"
@@ -221,9 +248,8 @@
             <span class="work-tech">Next.js</span>
           </div>
           <div class="work-description">
-            A sleek, responsive site crafted with the Next.js framework,
-            offering dynamic and interactive content. It features multiple pages
-            that you can explore for more details.
+            An e-commerce platform with product listings and shopping features,
+            developed using Next.js.
           </div>
           <a
             href="https://anrex.abolfazls.ir/"
@@ -266,17 +292,6 @@
             >View Project →</a
           >
         </div>
-      </div>
-
-      <h2 class="section-title">My Github</h2>
-      <div>
-        <p>You can check out my GitHub page here</p>
-        <a
-          href="https://github.com/abolfazlsamini"
-          class="work-link"
-          target="_blank"
-          >Github.com/abolfazlsamini →</a
-        >
       </div>
     </div>
 
